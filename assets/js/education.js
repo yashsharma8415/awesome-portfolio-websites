@@ -5,16 +5,6 @@ AOS.init();
 const moocs = document.querySelector(".moocs");
 const moocscards = [
   {
-    title: "Data Science",
-    cardImage: "assets/images/education-page/coursera1.png",
-    moocLink: "https://www.coursera.org/browse/data-science",
-  },
-  {
-    title: "Cryptography",
-    cardImage: "assets/images/education-page/udemy.png",
-    moocLink: "https://www.udemy.com/course/cryptography-for-beginners/",
-  },
-  {
     title: "Machine Learning",
     cardImage: "assets/images/education-page/coursera1.png",
     moocLink: "https://www.coursera.org/learn/machine-learning",
@@ -40,14 +30,10 @@ const moocscards = [
     moocLink: "https://www.udemy.com/course/bootstrap-4-tutorials/",
   },
   {
-    title: "Intro to React",
-    cardImage: "assets/images/education-page/EdX.png",
-    moocLink: "https://www.edx.org/learn/reactjs",
-  },
-  {
     title: "Intro to React Native",
     cardImage: "assets/images/education-page/coursera1.png",
-    moocLink: "https://www.coursera.org/lecture/react-native/introduction-to-react-native-Eax0D",
+    moocLink:
+      "https://www.coursera.org/lecture/react-native/introduction-to-react-native-Eax0D",
   },
   {
     title: "NodeJS, Express and MongoDB",
@@ -55,64 +41,58 @@ const moocscards = [
     moocLink: "https://www.coursera.org/learn/server-side-nodejs",
   },
   {
-    title: "XML-AJAX",
-    cardImage: "assets/images/education-page/udemy.png",
-    moocLink: "https://www.udemy.com/course/xml-from-beginner-to-expert/",
-  },
-  {
     title: "Data Structures & Algorithms",
     cardImage: "assets/images/education-page/udacity_logo.png",
-    moocLink: "https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256",
+    moocLink:
+      "https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256",
   },
 ];
 
 const experience = [
   {
-    img: "assets/images/education-page/c1.png"
+    img: "assets/images/education-page/c1.png",
   },
   {
-    img: "assets/images/education-page/c2.jpg"
+    img: "assets/images/education-page/c2.jpg",
   },
   {
-    img: "assets/images/education-page/c3.png"
+    img: "assets/images/education-page/c3.png",
   },
   {
-    img: "assets/images/education-page/c4.png"
+    img: "assets/images/education-page/c4.png",
   },
   {
-    img: "assets/images/education-page/c5.jpg"
+    img: "assets/images/education-page/c5.jpg",
   },
 ];
 
 let currentItem = 0;
 
-const img = document.getElementById('image');
+const img = document.getElementById("image");
 
-const prevBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
+const prevBtn = document.querySelector("#prevBtn");
+const nextBtn = document.querySelector("#nextBtn");
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener("DOMContentLoaded", function () {
   showExperience();
-})
+});
 
 function showExperience() {
   setInterval(function () {
     if (currentItem === experience.length) {
       currentItem = 0;
     }
-      const item = experience[currentItem];
-      img.src = item.img;
-      currentItem++;
-
-    },
-    3000);
+    const item = experience[currentItem];
+    img.src = item.img;
+    currentItem++;
+  }, 3000);
 }
 
 const showCards = () => {
   let output = "";
   moocscards.forEach(
     ({ title, cardImage, moocLink }) =>
-    (output += `        
+      (output += `        
         <div class="col-6 col-md-3 col-sm-4 column" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600" >  
             <div class="card mb-3 mx-auto">
                <div class="content">
@@ -132,7 +112,6 @@ const showCards = () => {
   moocs.innerHTML = output;
 };
 document.addEventListener("DOMContentLoaded", showCards);
-
 
 /* Badges*/
 
@@ -159,7 +138,7 @@ const showCards1 = () => {
   let output = "";
   badgesection.forEach(
     ({ title, image, description }) =>
-    (output += `       
+      (output += `       
       <div class="col-lg-4 col-md-6 p-2" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600"> 
         <img class="img-fluid d-block mb-3 mx-auto hvr-grow" src="${image}" alt="Card image cap" width="200">
           <div class="text-center font-weight-bolder" style="font-size: 1.3em;">${title}</div>
@@ -170,7 +149,6 @@ const showCards1 = () => {
 };
 document.addEventListener("DOMContentLoaded", showCards1);
 
-
 /* Timeline Section*/
 
 const timeline = document.querySelector(".timeline");
@@ -178,29 +156,37 @@ const timelinesection = [
   {
     heading: "Massachusetts Institute of Technology",
     image: "./assets/images/education-page/timeline-1.svg",
-    subheading: "Bachelors of Science, Computer Science & Engineering, (2020-2024)",
-    description: "<li>Top 1% in the department</li><li>Best undergraduate Reseracher</li><li>Betsy Schumacker Woman</li><li>Athlete of the Year Award</li>",
+    subheading:
+      "Bachelors of Science, Computer Science & Engineering, (2020-2024)",
+    description:
+      "<li>Top 1% in the department</li><li>Best undergraduate Reseracher</li><li>Betsy Schumacker Woman</li><li>Athlete of the Year Award</li>",
   },
 
   {
     heading: "Massachusetts Institute of Technology",
     image: "./assets/images/education-page/timeline-1.svg",
-    subheading: "Bachelors of Science, Computer Science & Engineering, (2020-2024)",
-    description: "<li>Top 1% in the department</li><li>Best undergraduate Reseracher</li><li>Betsy Schumacker Woman</li><li>Athlete of the Year Award</li>",
+    subheading:
+      "Bachelors of Science, Computer Science & Engineering, (2020-2024)",
+    description:
+      "<li>Top 1% in the department</li><li>Best undergraduate Reseracher</li><li>Betsy Schumacker Woman</li><li>Athlete of the Year Award</li>",
   },
 
   {
     heading: "Massachusetts Institute of Technology",
     image: "./assets/images/education-page/timeline-1.svg",
-    subheading: "Bachelors of Science, Computer Science & Engineering, (2020-2024)",
-    description: "<li>Top 1% in the department</li><li>Best undergraduate Reseracher</li><li>Betsy Schumacker Woman</li><li>Athlete of the Year Award</li>",
+    subheading:
+      "Bachelors of Science, Computer Science & Engineering, (2020-2024)",
+    description:
+      "<li>Top 1% in the department</li><li>Best undergraduate Reseracher</li><li>Betsy Schumacker Woman</li><li>Athlete of the Year Award</li>",
   },
 
   {
     heading: "Massachusetts Institute of Technology",
     image: "./assets/images/education-page/timeline-1.svg",
-    subheading: "Bachelors of Science, Computer Science & Engineering, (2020-2024)",
-    description: "<li>Top 1% in the department</li><li>Best undergraduate Reseracher</li><li>Betsy Schumacker Woman</li><li>Athlete of the Year Award</li>",
+    subheading:
+      "Bachelors of Science, Computer Science & Engineering, (2020-2024)",
+    description:
+      "<li>Top 1% in the department</li><li>Best undergraduate Reseracher</li><li>Betsy Schumacker Woman</li><li>Athlete of the Year Award</li>",
   },
 ];
 
@@ -208,7 +194,7 @@ const showCards2 = () => {
   let output = "";
   timelinesection.forEach(
     ({ heading, image, subheading, description }) =>
-    (output += `       
+      (output += `       
       <div class="timeline" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">
       <div class="timeline-content">
         <h6 class="center-align font-weight-bolder pt-1">${heading}</h6>

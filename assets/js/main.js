@@ -7,7 +7,7 @@ $(document).ready(function () {
 //Get the top button
 var mybutton = document.getElementById("myBtn");
 
-if(mybutton) {
+if (mybutton) {
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () {
     scrollFunction();
@@ -161,12 +161,12 @@ bodyElement.append(footer);
 /*JavaScript for toggle for light/dark mode*/
 
 // selecting toggler dynamically as their are two separate code sections for the toggler to support both mobile screen and desktop screens
-if(window.innerWidth <= 992) {
+if (window.innerWidth <= 992) {
   var checkbox = document.querySelector("#switch-2");
-  var toggler = document.querySelector('.toggle-button-2');
+  var toggler = document.querySelector(".toggle-button-2");
 } else {
   var checkbox = document.querySelector("#switch-1");
-  var toggler = document.querySelector('.toggle-button-1');
+  var toggler = document.querySelector(".toggle-button-1");
 }
 
 if (checkbox) {
@@ -178,8 +178,8 @@ if (checkbox) {
   }
 
   // selecting the footer text & footer icons
-  const footerText = document.querySelector('.footer-text p');
-  const footerIcons = document.querySelectorAll('.sub-footer-icon');
+  const footerText = document.querySelector(".footer-text p");
+  const footerIcons = document.querySelectorAll(".sub-footer-icon");
 
   // listening for click on toggler
   toggler.addEventListener("click", () => {
@@ -191,7 +191,7 @@ if (checkbox) {
 
       document.documentElement.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light");
-    } else { 
+    } else {
       /*
       if there is click on toggler and if theme is light (initially it will be light) then the theme should convert to dark
       */
@@ -213,37 +213,32 @@ if (checkbox) {
 
   // function for changing color when dark theme is on.
   let toggleDarkColor = () => {
+    footerIcons.forEach((icon) => {
+      icon.style.backgroundColor = "transparent";
 
-    footerIcons.forEach(icon => {
-        icon.style.backgroundColor = 'transparent';
+      // hover effect
+      icon.addEventListener("mouseover", () => {
+        icon.style.backgroundColor = "transparent";
+      });
 
-        // hover effect
-        icon.addEventListener('mouseover',  () => {
-          icon.style.backgroundColor = 'transparent';
-        });
-
-        icon.addEventListener('mouseleave',  () => {
-          icon.style.backgroundColor = 'transparent';
-        });
+      icon.addEventListener("mouseleave", () => {
+        icon.style.backgroundColor = "transparent";
+      });
     });
-  }
+  };
 
   // function for changing color when the light theme is on.
   let toggleLightColor = () => {
+    footerIcons.forEach((icon) => {
+      icon.style.backgroundColor = "transparent";
+      // hover effect
+      icon.addEventListener("mouseover", () => {
+        icon.style.backgroundColor = "transparent";
+      });
 
-    footerIcons.forEach(icon => {
-        icon.style.backgroundColor='transparent';
-        // hover effect
-        icon.addEventListener('mouseover',  () => {
-          icon.style.backgroundColor = 'transparent';
-         
-        });
-
-        icon.addEventListener('mouseleave',  () => {
-          icon.style.backgroundColor = 'transparent';
-        });
+      icon.addEventListener("mouseleave", () => {
+        icon.style.backgroundColor = "transparent";
+      });
     });
-  } 
+  };
 }
-
-
